@@ -1,0 +1,73 @@
+<?php
+?>
+<form id="wl-task" class="form contact" style="width: 500px;"
+      action="<?php  echo $block->getFormAction(); ?>"
+      method="post"
+      data-hasrequired="<?php  echo __('* Required Fields') ?>"
+>
+    <fieldset class="fieldset" >
+        <legend class="legend"><span><?php  echo __('Personal Information') ?></span></legend><br />
+        <div class="field email required">
+            <label class="label" for="email"><span><?php  echo __('Email') ?></span></label>
+            <div class="control">
+                <input name="email" id="email" title="<?php  echo __('Email') ?>" class="input-text" type="email" data-validate="{required:true, 'validate-email':true}"/>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="first_name"><span><?php  echo __('First Name') ?></span></label>
+            <div class="control">
+                <input name="first_name" id="first_name" title="<?php  echo __('First Name') ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+        <div class="field name required">
+            <label class="label" for="last_name"><span><?php  echo __('Last Name') ?></span></label>
+            <div class="control">
+                <input name="last_name" id="last_name" title="<?php  echo __('Last Name') ?>" class="input-text" type="text" data-validate="{required:true}"/>
+            </div>
+        </div>
+
+        <div class="field">
+            <label class="label" for="hobby">
+                <span><?=  __('Hobby') ?></span>
+            </label>
+            <div class="control">
+                <select id="hobby" name="hobby"
+                        title="<?=  __('Hobby') ?>"
+                        >
+                    <option value=""><?= __('Please Select the Hobby You are Fond of') ?></option>
+                    <option value="<?= __('Gym') ?>"><?= __('Gym') ?></option>
+                    <option value="<?= __('Reading') ?>"><?= __('Reading') ?></option>
+                    <option value="<?= __('Swimming') ?>"><?= __('Swimming') ?></option>
+                </select>
+            </div>
+        </div>
+
+        <div class="field telephone">
+            <label class="label" for="telephone"><span><?php  echo __('Phone Number') ?></span></label>
+            <div class="control">
+                <input name="telephone" id="telephone" title="<?php  echo __('Phone Number') ?>" class="input-text" type="text"/>
+            </div>
+        </div>
+
+        <?php echo $block->getChildHtml('form.additional.info'); ?>
+    </fieldset>
+    <div style="text-align: right;" >
+        <div class="primary">
+            <button type="submit" title="<?php  echo __('Send info') ?>" class="action submit primary">
+                <span><?php  echo __('Send info') ?></span>
+            </button>
+        </div>
+    </div>
+</form>
+<?php
+$ajaxurl = $block->getFormAction();
+?>
+<script type="text/x-magento-init">
+        {
+            "*": {
+                "Potoky_WhiteLabelTask/form": {
+                    "AjaxUrl": "<?php echo $ajaxurl; ?>"
+                }
+            }
+        }
+</script>

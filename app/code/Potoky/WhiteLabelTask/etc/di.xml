@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../../../../lib/internal/Magento/Framework/ObjectManager/etc/config.xsd">
+    <virtualType name="virtWlOrderLogger" type="Magento\Framework\Logger\Handler\Base">
+        <arguments>
+            <argument name="fileName" xsi:type="string">/var/log/potoky/wl.txt</argument>
+        </arguments>
+    </virtualType>
+    <type name="Potoky\WhiteLabelTask\Observer\Data">
+        <arguments>
+            <argument name="wlOrderLogger" xsi:type="object">virtWlOrderLogger</argument>
+        </arguments>
+    </type>
+</config>

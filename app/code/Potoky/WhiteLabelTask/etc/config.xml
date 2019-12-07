@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <catalog>
+            <random_group>
+                <random_field>Clicking here is the shortest way to get to the task page.</random_field>
+            </random_group>
+        </catalog>
+    </default>
+</config>

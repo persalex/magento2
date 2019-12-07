@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<layout xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/layout_generic.xsd">
+    <head>
+        <css src="Potoky_WhiteLabelTask::wlt.css"/>
+    </head>
+    <referenceContainer name="product.info.main">
+        <block class="Potoky\WhiteLabelTask\Block\Random" name="random" template="random.phtml" after="product.price.tier"/>
+    </referenceContainer>
+</layout>

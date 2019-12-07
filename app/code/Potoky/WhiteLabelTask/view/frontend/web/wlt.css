@@ -1,0 +1,11 @@
+.random-wl {
+    border: 2px ridge grey;
+    padding: 20px;
+    text-align: center;
+    font-size: x-large;
+    background-color: lightgoldenrodyellow;
+}
+
+#random-wl:hover {
+    color: orange;
+}

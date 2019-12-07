@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Potoky_WhiteLabelTask::whitelabaltask" title="White Labal Task" module="Potoky_WhiteLabelTask" sortOrder="51" resource="Potoky_WhiteLabelTask::whitelabaltask"/>
+        <add id="Potoky_WhiteLabelTask::info" title="Info" module="Potoky_WhiteLabelTask" sortOrder="10" action="wl_task_backend/info/index" resource="Potoky_WhiteLabelTask::info" parent="Potoky_WhiteLabelTask::whitelabaltask"/>
+    </menu>
+</config>
